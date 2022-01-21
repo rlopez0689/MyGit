@@ -52,8 +52,18 @@ docker exec -it mygit_web_1 python manage.py test
 docker exec -it mygit_front_1 npm test
 ```
 
-## Create Djando Admin User
+## Create Django Admin User
 
 ```bash
 docker exec -it mygit_web_1 python manage.py createsuperuser
 ```
+
+## Screenshots
+
+![alt text](https://drive.google.com/uc?id=1YyNgtqm6Oqvl_8RHHTrnWCiJZwPKAMe9)
+![alt text](https://drive.google.com/uc?id=1It2RF_OPnotiFHBkyun_chWsK8Bavh1b)
+![alt text](https://drive.google.com/uc?id=1pF8LXT4SDnpBVM8pRRuF4UZQXZsduRTA)
+![alt text](https://drive.google.com/uc?id=1kCCG2FgaJ52syHaH6Hy7ts9-hnUQHsIh)
+![alt text](https://drive.google.com/uc?id=1NYOnJ88z1sMV-lQgslpCGgXuqDxu2EVF)
+![alt text](https://drive.google.com/uc?id=1e_isQgrn0reFnvoboc3QBHPsccLnjrzQ)
+![alt text](https://drive.google.com/uc?id=1lryZLFoms4XgYvxDMoEZiJH3jr5uQKQd)
