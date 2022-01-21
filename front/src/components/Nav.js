@@ -108,8 +108,12 @@ const Nav = ({ active }) => {
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link} url={link.url}>
-                  {link}
+                <NavLink
+                  key={link.name}
+                  active={link.name === active}
+                  url={link.link}
+                >
+                  {link.name}
                 </NavLink>
               ))}
             </Stack>
