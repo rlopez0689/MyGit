@@ -93,6 +93,7 @@ const PRCreate = () => {
         <Formik
           initialValues={{
             title: "",
+            description: "",
             author: "",
             status: STATUS_OPENED,
             org_branch: "",
