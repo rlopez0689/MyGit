@@ -9,8 +9,8 @@ router.register(r'prs', PRViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/branches/', BranchList.as_view()),
-    path('api/branches/<str:name>', BranchDetail.as_view()),
-    path('api/commits/<str:hexsha>', CommitDetail.as_view()),
+    path('api/branches/', BranchList.as_view(), name="get-branches"),
+    path('api/branches/<str:name>', BranchDetail.as_view(), name='get-branch'),
+    path('api/commits/<str:hexsha>', CommitDetail.as_view(), name="get-commit"),
     path('api/', include(router.urls))
 ]
