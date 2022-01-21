@@ -111,6 +111,7 @@ const PRList = () => {
             />
             <VStack alignItems="center" justifyContent="center">
               <TextValue label="Title" value={pr.title} />
+              <TextValue label="Description" value={pr.description} />
               <TextValue label="Author" value={pr.author} />
               <TextValue label="Org Branch" value={pr.org_branch} />
               <TextValue label="Dest Branch" value={pr.dest_branch} />

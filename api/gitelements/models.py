@@ -1,3 +1,4 @@
+from statistics import mode
 from django.db import models
 
 
@@ -13,6 +14,7 @@ PR_STATUS =(
 
 class PR(models.Model):
     title = models.CharField(max_length=40)
+    description = models.TextField()
     author = models.CharField(max_length=40)
     org_branch = models.TextField()
     dest_branch = models.TextField()

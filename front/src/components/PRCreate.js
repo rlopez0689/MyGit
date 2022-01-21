@@ -24,6 +24,7 @@ import { STATUS_OPENED, STATUS_MERGED } from "../utils/utils";
 const PRSchema = Yup.object().shape({
   title: Yup.string().required("Required"),
   author: Yup.string().required("Required"),
+  description: Yup.string().required("Required"),
   org_branch: Yup.string().required("Required"),
   dest_branch: Yup.string().required("Required"),
   status: Yup.string().required("Required"),
@@ -125,6 +126,20 @@ const PRCreate = () => {
                 />
                 <FormErrorMessage>{errors.title}</FormErrorMessage>
               </FormControl>
+              <FormControl
+                isInvalid={touched.description && errors.description}
+              >
+                <FormLabel htmlFor="description">Description</FormLabel>
+                <Input
+                  id="description"
+                  type="text"
+                  value={values.description}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <FormErrorMessage>{errors.description}</FormErrorMessage>
+              </FormControl>
+
               <FormControl isInvalid={touched.author && errors.author}>
                 <FormLabel htmlFor="author">Author</FormLabel>
                 <Input
