@@ -16,4 +16,4 @@ class PR(models.Model):
     author = models.CharField(max_length=40)
     org_branch = models.TextField()
     dest_branch = models.TextField()
-    status = models.CharField(choices=PR_STATUS, max_length=10)
+    status = models.IntegerField(choices=PR_STATUS)

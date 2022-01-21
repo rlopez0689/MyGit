@@ -42,8 +42,10 @@ class MyGit:
         ]
 
     def merge(self, org_branch, dest_branch):
+        self.repo.git.checkout(dest_branch)
         dest_branch_obj = self.repo.branches[dest_branch]
         org_branch_obj = self.repo.branches[org_branch]
         root = self.repo.merge_base(org_branch, dest_branch)
-        self.repo.index.merge_tree(dest_branch_obj, base=root)
-        self.repo.index.commit(f'merging {dest_branch_obj} into current branch', parent_commits=(org_branch_obj.commit, dest_branch_obj.commit))
+        self.repo.index.merge_tree(org_branch, base=root)
+        self.repo.index.commit(f'merging {org_branch} into current {dest_branch} branch', parent_commits=(org_branch_obj.commit, dest_branch_obj.commit))
+        dest_branch_obj.checkout(force=True)
