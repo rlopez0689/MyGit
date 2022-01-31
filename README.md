@@ -1,6 +1,6 @@
 # My Git
 
-My git is an API wrapper around the git information of one git repo. In this case is for https://github.com/rlopez0689/fullstack-interview-test, but can be easily change to point to another one.
+My git is an API wrapper around the git information of one git repo. In this case is for https://github.com/rlopez0689/MyProducts.git, but can be easily change to point to another one.
 
 It includes:
 
@@ -12,7 +12,7 @@ It includes:
 
 ## How does it work
 
-When building the docker images it will clone the repository https://github.com/rlopez0689/fullstack-interview-test into the directory ./repo(gitignored) of the proyect. From there we can create, delete, merge branches locally and they will be reflected inmediatly into MyGit.
+When building the docker images it will clone the repository https://github.com/rlopez0689/MyProducts.git into the directory ./repo(gitignored) of the proyect. From there we can create, delete, merge branches locally and they will be reflected inmediatly into MyGit.
 
 - Front end created with React(javascript)
 - Back end created with Django Rest Framework(python)

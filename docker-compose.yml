@@ -13,7 +13,7 @@ services:
     command: >
       bash -c "
         ./wait-for-postgres.sh db &&
-        (git clone https://github.com/rlopez0689/fullstack-interview-test.git /usr/src/repo/fullstack-interview-test  || true) &&
+        (git clone https://github.com/rlopez0689/MyProducts.git /usr/src/repo/MyProducts  || true) &&
         python manage.py migrate && python manage.py runserver 0.0.0.0:8000
       "
     volumes:
@@ -27,7 +27,7 @@ services:
       - DB_PASSWORD=postgres
       - DB_HOST=db
       - DB_PORT=5432
-      - REPO_PATH=/usr/src/repo/fullstack-interview-test
+      - REPO_PATH=/usr/src/repo/MyProducts
     depends_on:
       - db
   db:
